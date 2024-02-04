@@ -1,0 +1,17 @@
+<h1 style="text-align:center">PRODUCTS</h1>
+<div class="container">
+  @for (product of products; track $index) {
+    <div class="card">
+      <div style="display: flex;flex-direction:row;">
+        <div>{{ product.id + '-)' }}</div>
+        <div>{{ product.title }}</div>
+      </div>
+      <img [src]="product.image" style="height:300px;width:300px;">
+      <div>{{ product.description }}</div>
+      <div style="font-weight: 600;;">{{ product.price + '$' }}</div>
+      <div class="buutton">
+        <button class="button" mat-raised-button (click)="openDialog(product)">Detay</button>
+      </div> 
+    </div>
+  }
+</div>
